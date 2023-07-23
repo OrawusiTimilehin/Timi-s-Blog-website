@@ -1,0 +1,21 @@
+/* Navbar */
+
+.navbar-container{
+    display: flex;
+    height: 6rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-left{
+    border: 1px solid red;
+    flex: 1.5;
+}
+
+.navbar-right{
+    border: 1px solid red;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-evenly;
+} 

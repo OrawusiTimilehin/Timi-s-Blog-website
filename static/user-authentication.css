@@ -1,0 +1,13 @@
+/* Login Form */
+
+.emial{
+    font-size: 50px;
+    color: red;
+}
+
+.form-container{
+    background-color: rgb(8, 110, 199);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}

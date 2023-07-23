@@ -2,13 +2,19 @@
 <html>
     <head>
         {% include "header.html" %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='navbar.css')}}">
     </head>
     <body>
-        <div>
-            <a> Timi's Corner </a>
-            <a> Contact </a>
-            <a> Log in </a>
-            <a> Sign up </a>
-        </div>
+        <nav class="navbar-container">
+            <div class="navbar-left">
+                <a> Timi's Corner </a>
+            </div>
+            <div class="navbar-right">
+                <a href=" {{ url_for('contact')}} "> Contact </a>
+                <a href=" {{ url_for('login')}} "> Log in </a>
+                <a href=" {{ url_for('signup')}} "> Sign up </a>
+            </div>
+            
+        </nav>
     </body>
 </html>
