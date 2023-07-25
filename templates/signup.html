@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
-        {% include "header.html" %}
+        {% extends "index.html" %}
     </head>
     <body>
+        {% block content %}
         <div>
-            This is going to be the card for sign up page
+            <form>
+                {{ form.csrf_token }}
+                <p> {{ form.email.label }}</p>
+                <p> {{ form.email() }}</p>
+                <p> {{ form.password.label }} </p>
+                <p> {{ form.password() }} </p>
+                <p> {{ form.submit() }} </p>
+            </form>
         </div>
+        {% endblock %}
     </body>
 </html>

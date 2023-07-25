@@ -4,9 +4,20 @@
         {% include "header.html" %}
     </head>
     <body>
-        {% include "navbar.html" %}
+        <nav class="navbar-container">
+            <div class="navbar-left">
+                <a> Timi's Corner </a>
+            </div>
+            <div class="navbar-right">
+                <a href=" {{ url_for('contact')}} "> Contact </a>
+                <a href=" {{ url_for('login')}} "> Log in </a>
+                <a href=" {{ url_for('signup')}} "> Sign up </a>
+            </div>
+            
+        </nav>
         <!-- <h1 class="welcome-header"> Welcome to Timi's Corner </h1>
         <h3> This is going to be the description of the Blog </h3> -->
+        {% block content %}
         <div class="display-blogs-container">
             <div class="left-section">
                 <div class="latest-blog"> Main blog of the day would go here</div>
@@ -21,7 +32,7 @@
         <div class="button-container">
             <button class="load-more-button"> Load More </button>
         </div>
-        
+        {% endblock %}
        
     </body>
 </html>

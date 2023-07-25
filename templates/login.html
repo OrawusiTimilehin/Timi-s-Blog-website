@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html>
     <head>
-        {% include "header.html" %}
+        {% extends "index.html" %}
+        {% block styles %}
+        {{ super() }}
         <link rel="stylesheet" href="{{ url_for('static', filename='user-authentication.css')}}">
+        {% endblock %}
     </head>
     <body>
+        {% block content %}
         <h1 class="email"> Hellooo</h1>
             <form class="form-conainer">
-                <label > Email </label>
-                <input type="text">
-                <label> Password </label>
-                <input type="password">
-                <button type="submit"> Login </button>
+                {{ form.csrf_token }}
+                <p>{{form.email.label}}</p>
+                <p> {{form.email()}} </p>
+                <p> {{ form.password.label }} </p>
+                <p> {{ form.password()}} </p>
+                <p> {{ form.submit }} </p>
             </form>
         </div>
+        {% endblock %}
     </body>
 </html>
