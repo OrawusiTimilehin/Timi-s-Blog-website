@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html>
     <head>
-
+        {% extends "index.html" %}
+        {% block styles %}
+        {{ super() }}
+        <link rel="stylesheet" href="static/contact.css">
+        {% endblock %}
+        
     </head>
     <body>
+        {% block content %}
         <div>
-            <h1> Contact Me </h1>
+            <h1 class="contact-me"> Contact Me </h1>
             <form>
-                
+                {{ form.csrf_token}}
+                <p> {{ form.email.label }} </p>
+                <p> {{ form.email() }} </p>
+                <p> {{ form.message.label }} </p>
+                <p> {{ form.message() }} </p>
+                <p> {{ form.submit() }} </p>
             </form>
-            
+            {% endblock %}
 
         </div>
     </body>

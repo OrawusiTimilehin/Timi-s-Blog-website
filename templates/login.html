@@ -9,7 +9,9 @@
     </head>
     <body>
         {% block content %}
-        <h1 class="email"> Hellooo</h1>
+        <div>
+            <h1 class="email"> Welcome back! </h1>
+            <p> Login to continue </p>
             <form class="form-conainer">
                 {{ form.csrf_token }}
                 <p>{{form.email.label}}</p>
@@ -19,6 +21,7 @@
                 <p> {{ form.submit }} </p>
             </form>
         </div>
+        
         {% endblock %}
     </body>
 </html>

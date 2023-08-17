@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        {% include "header.html" %}
+        {% block styles %}
+        <link rel="stylesheet", href="{{url_for('static', filename='base.css')}}">
+        {% endblock %}
     </head>
     <body>
         <nav class="navbar-container">
             <div class="navbar-left">
-                <a> Timi's Corner </a>
+                <a href="{{ url_for('home')}}"> Timi's Corner </a>
             </div>
             <div class="navbar-right">
                 <a href=" {{ url_for('contact')}} "> Contact </a>

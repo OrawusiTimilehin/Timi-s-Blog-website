@@ -1,0 +1,17 @@
+/* Blogs Grid*/
+
+.blog-card{
+    border: 2px solid red;
+    height: 4rem;
+}
+
+.blogs-grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+
+}
+
+.header{
+    color: red;
+}

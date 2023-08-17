@@ -6,6 +6,8 @@
     <body>
         {% block content %}
         <div>
+            <h1 class="email"> Hey there👋 </h1>
+            <p> Enter details below to register. </p>
             <form>
                 {{ form.csrf_token }}
                 <p> {{ form.email.label }}</p>
